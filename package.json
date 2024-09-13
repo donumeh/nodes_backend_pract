@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-	"deploy": "git add * && git commit -m 'new changes' && git push",
+    "build:ui": "rm -rf dist && cd ../spa/ && npm run build && cp -r dist ../notes/",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,9 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.6.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

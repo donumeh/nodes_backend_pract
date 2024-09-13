@@ -8,3 +8,12 @@ Content-Type: application/json
 {
     "content": "A random content"
 }
+
+### 
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+    "content": "Ensure that everything still works",
+    "important": true
+}
